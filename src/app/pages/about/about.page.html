@@ -1,0 +1,33 @@
+<div class="flex flex-col items-center w-full overflow-y-hidden">
+  <div class="flex w-full flex-col items-center">
+    <h1>Resume</h1>
+
+    <p class="inline md:hidden">
+      Know someone looking to hire their next all-star? Download my
+      <a class="link" href="assets/resume.pdf" download>resume!</a>
+    </p>
+    <div class="hidden md:inline w-full relative">
+      <a
+        class="border rounded-full border-gray-500 absolute right-12 top-0 z-10 animate-bounce"
+        href="assets/resume.pdf"
+        download
+        matTooltip="Know someone looking to hire their next all-star? Download my resume!"
+      >
+        <button mat-icon-button>
+          <mat-icon class="text-gray-500">download</mat-icon>
+        </button>
+      </a>
+      <pdf-viewer
+        src="assets/resume.pdf#toolbar=0&navpanes=0"
+        class="pdf"
+        [render-text]="false"
+        [stick-to-page]="true"
+        [show-all]="true"
+        [page]="1"
+        [original-size]="true"
+        [fit-to-page]="true"
+        [show-borders]="false"
+      ></pdf-viewer>
+    </div>
+  </div>
+</div>
