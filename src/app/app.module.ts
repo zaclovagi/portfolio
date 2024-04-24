@@ -15,6 +15,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { SharedModule } from './shared';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     ReactiveFormsModule,
     PdfViewerModule,
     MatTooltipModule,
+    SharedModule,
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],

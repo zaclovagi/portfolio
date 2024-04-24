@@ -4,7 +4,11 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'codebro': "url('assets/code-bro.svg')",
+      }
+    },
   },
   plugins: [],
 }

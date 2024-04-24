@@ -9,8 +9,11 @@
   </div>
   <div class="nav-group">
     <a
-      class="nav-item"
+      [class.nav-item]="tab.url !== router.url"
       [class.current]="tab.url === router.url"
+      [class.currentSticky]="
+        tab.url === router.url && ($isAtTop | async) !== true
+      "
       *ngFor="let tab of tabs"
       [routerLink]="tab.url"
     >
@@ -24,7 +27,13 @@
       <mat-icon>menu</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item *ngFor="let tab of tabs" [routerLink]="tab.url">
+      <button
+        class="hover:animate-bounce"
+        mat-menu-item
+        *ngFor="let tab of tabs"
+        [routerLink]="tab.url"
+      >
+        <mat-icon>{{ tab.icon }}</mat-icon>
         <span [class.underline]="tab.url === router.url">
           {{ tab.title }}
         </span>

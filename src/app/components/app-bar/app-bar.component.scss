@@ -1,9 +1,9 @@
 .bar {
-  @apply w-full flex flex-row justify-between items-center p-4  text-cyan-500 z-20 border-b-2;
+  @apply w-full flex flex-row justify-between items-center p-4  text-teal-500 z-20 border-b-2 border-teal-500;
 }
 
 .stickyBar {
-  @apply sticky top-0 bg-gradient-to-tr from-cyan-950 to-cyan-600 text-white border-none shadow-xl;
+  @apply sticky top-0 bg-gradient-to-tr from-teal-950 to-teal-600 text-white border-none shadow-xl;
 }
 .stickyTitle {
   @apply text-white;
@@ -12,8 +12,11 @@
   @apply hidden lg:flex flex-row gap-8;
 }
 .nav-item {
-  @apply flex flex-row gap-1 p-2 rounded-md hover:bg-black/10 items-center;
+  @apply flex flex-row gap-1 p-2 rounded-md hover:bg-black/10 items-center hover:scale-125;
 }
 .current {
-  @apply italic; //text-cyan-400
+  @apply flex flex-row gap-1 p-2 rounded-md bg-teal-500/30 text-white; //text-teal-400
+}
+.currentSticky {
+  @apply text-teal-100;
 }
