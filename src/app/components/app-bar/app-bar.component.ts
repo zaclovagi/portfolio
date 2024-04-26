@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject, ReplaySubject } from 'rxjs';
 
-const minimumY = 10;
+const minimumY = 100;
 
 @Component({
   selector: 'app-bar',
@@ -14,7 +14,6 @@ export class AppBarComponent {
     this.router = router;
 
     document.addEventListener('scroll', () => {
-      console.log('scrolled', window.scrollY);
       this.$isAtTop.next(window.scrollY < minimumY);
     });
   }

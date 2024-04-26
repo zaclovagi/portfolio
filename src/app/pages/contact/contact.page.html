@@ -1,16 +1,25 @@
 <app-page>
-  <div class="w-full flex flex-col gap-4 items-center text-gray-500">
-    <h1 class="h1 text-teal-500">Contact</h1>
-    <div class="flex flex-col items-center">
-      <p>Let's get in touch!</p>
-      <p>
-        I can be reached by filling out the form below or by email at
-        <a class="link" href="mailto:zaclovagi@gmail.com"
-          >zaclovagi&#64;gmail.com</a
-        >
-      </p>
+  <div class="w-full flex flex-col gap-12 items-center text-gray-500 p-4">
+    <h1 class="sectionTitle">Contact</h1>
+    <div
+      class="flex flex-col md:flex-row gap-4 items-center justify-center min-w-[80%]"
+    >
+      <img
+        src="assets/contact.png"
+        matTooltip="Illustration by Storyset"
+        [matTooltipPositionAtOrigin]="true"
+        class="h-auto max-w-xs sm:max-w-sm md:max-w-md"
+      />
+      <div class="flex flex-col items-center">
+        <h2>Let's get in touch!</h2>
+        <p>
+          I can be reached by filling out the form below or by email at
+          <a class="link" href="mailto:zaclovagi@gmail.com"
+            >zaclovagi&#64;gmail.com</a
+          >
+        </p>
+        <app-contact-form class="w-full max-w-[600px] mt-8"></app-contact-form>
+      </div>
     </div>
-
-    <app-contact-form class="w-full max-w-[600px]"></app-contact-form>
   </div>
 </app-page>

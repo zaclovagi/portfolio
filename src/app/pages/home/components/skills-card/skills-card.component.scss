@@ -1,0 +1,14 @@
+mat-card {
+  @apply rounded-3xl shadow-none h-full min-h-[28rem] max-w-lg flex-grow min-w-[250px] drop-shadow-2xl;
+}
+mat-card-header {
+  @apply flex flex-row items-center justify-center bg-gradient-to-tr from-teal-950 to-teal-600 rounded-t-3xl pb-3 shadow-xl;
+}
+
+mat-card-content {
+  @apply h-full;
+}
+
+li {
+  @apply text-lg text-center;
+}

@@ -1,7 +1,15 @@
-.section1 {
-  @apply p-4 bg-white flex flex-col md:flex-row gap-4 justify-evenly items-center w-full h-[60vh];
+.columns {
+  @apply mx-auto flex flex-col lg:grid grid-cols-2 items-center gap-8 lg:gap-48 p-8;
 }
 
-.section2 {
-  @apply p-4 bg-teal-300 flex flex-col md:flex-row-reverse gap-4 justify-evenly items-center w-full h-[60vh];
+.columns-reverse {
+  @apply mx-auto flex flex-col-reverse lg:grid grid-cols-2 items-center gap-8 lg:gap-48 p-8;
+}
+
+.skillsContainer {
+  @apply w-full flex flex-row h-full;
+}
+
+app-skills-card {
+  @apply flex-grow;
 }

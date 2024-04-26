@@ -1,0 +1,14 @@
+<div class="flex flex-row justify-center">
+  <mat-card class="!h-full">
+    <mat-card-header>
+      <ng-content select="[header]"></ng-content>
+    </mat-card-header>
+    <mat-card-content class="!h-full">
+      <ul class="flex flex-col items-center justify-evenly h-full p-1">
+        <li *ngFor="let skill of skills">
+          {{ skill }}
+        </li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+</div>

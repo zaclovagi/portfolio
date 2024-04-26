@@ -12,18 +12,19 @@ const routes: Routes = [
   },
   {
     path: 'about',
-    component: AboutPage,
+    loadChildren: () =>
+      import('./pages/about/about.module').then((m) => m.AboutModule),
   },
-  // {
-  //   path: 'projects',
-  //   loadChildren: () =>
-  //     import('./pages/projects/projects.module').then((m) => m.ProjectsModule),
-  // },
-  // {
-  //   path: 'games',
-  //   loadChildren: () =>
-  //     import('./pages/games/games.module').then((m) => m.GamesModule),
-  // },
+  {
+    path: 'projects',
+    loadChildren: () =>
+      import('./pages/projects/projects.module').then((m) => m.ProjectsModule),
+  },
+  {
+    path: 'games',
+    loadChildren: () =>
+      import('./pages/games/games.module').then((m) => m.GamesModule),
+  },
   {
     path: 'contact',
     component: ContactPage,

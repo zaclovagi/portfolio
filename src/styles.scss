@@ -14,8 +14,8 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$portfolio-primary: mat.define-palette(mat.$blue-palette);
-$portfolio-accent: mat.define-palette(mat.$indigo-palette, A200, A100, A400);
+$portfolio-primary: mat.define-palette(mat.$teal-palette);
+$portfolio-accent: mat.define-palette(mat.$cyan-palette);
 $portfolio-typography: mat.define-typography-config();
 
 // The warn palette is optional (defaults to red).
@@ -65,6 +65,10 @@ html {
   @apply font-bold text-5xl;
 }
 
+.sectionTitle {
+  @apply title text-cyan-800;
+}
+
 h1 {
   @apply font-bold text-3xl text-teal-500;
 }
@@ -80,7 +84,8 @@ h3 {
   @apply flex flex-col gap-1;
 }
 
-p {
+p,
+li {
   @apply text-gray-500;
 }
 
@@ -88,13 +93,17 @@ p {
   @apply text-blue-500 hover:underline italic;
 }
 
-.pdf {
-  // width: 100%;
-  aspect-ratio: 4 / 3;
-  // height: 50%;
-  margin: 0;
-  padding: 0;
-  @apply overflow-y-hidden;
+// add the code bellow
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
 
 .responsive-image {

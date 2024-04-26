@@ -1,25 +1,83 @@
 <div class="w-full flex flex-col items-center">
-  <div class="section1">
+  <div class="columns min-h-[40vh]">
     <img
-      class="responsive-image rounded-full shadow-xl shadow-gray-500"
+      class="h-auto max-w-xs sm:max-w-sm md:max-w-md rounded-full shadow-xl shadow-gray-500"
       src="assets/headshot.jpg"
     />
-    <div class="flex flex-col gap-2 items-center">
-      <h1 class="title text-cyan-800 whitespace-nowrap text-center">
-        Zac Lovagi
-      </h1>
-      <h2 class="text-center">Full Stack Developer</h2>
-      <p class="text-center">
-        Welcome to my portfolio! I am an experienced full stack developer who is
-        passionate about every aspect of web applications.
+    <div class="flex flex-col gap-4 justify-evenly items-center">
+      <div class="flex flex-col gap-2 items-center">
+        <h1 class="sectionTitle whitespace-nowrap text-center">Zac Lovagi</h1>
+        <h2 class="text-center">Full Stack Developer</h2>
+      </div>
+
+      <p class="text-center text-lg md:max-w-md mt-4">
+        Welcome to my portfolio where code meets canvas, and imagination knows
+        no limits. I'm Zac, a passionate full-stack developer with a thirst for
+        knowledge and a flair for creativity. I invite you to explore my
+        portfolio, a curated collection of my endeavors in both web/app
+        development and game design. Whether it's crafting efficient web
+        solutions or captivating gaming experiences, I thrive on the opportunity
+        to innovate and push boundaries.
       </p>
     </div>
   </div>
-  <div class="section2">
-    <img class="responsive-image" src="assets/code-bro.png" />
-    <div>
-      <h1 class="title text-cyan-800">Full Stack Developer</h1>
+  <div class="w-full flex flex-col items-center p-10 bg-teal-300 gap-8">
+    <h1 class="sectionTitle">My Skills</h1>
+    <div
+      class="w-full flex flex-col lg:grid lg:grid-cols-3 min-h-[28rem] gap-10 content-center h-full"
+    >
+      <div class="skillsContainer">
+        <app-skills-card [skills]="frontEndSkills">
+          <div header class="flex flex-row items-center gap-1">
+            <mat-icon class="text-white">code</mat-icon>
+            <h3 class="text-xl text-white">Front End</h3>
+          </div>
+        </app-skills-card>
+      </div>
+
+      <div class="skillsContainer">
+        <app-skills-card [skills]="backEndSkills">
+          <div header class="flex flex-row items-center gap-1">
+            <mat-icon class="text-white">engineering</mat-icon>
+            <h3 class="text-xl text-white">Back End</h3>
+          </div>
+        </app-skills-card>
+      </div>
+
+      <div class="skillsContainer">
+        <app-skills-card [skills]="miscSkills">
+          <div header class="flex flex-row items-center gap-1">
+            <mat-icon class="text-white">handyman</mat-icon>
+            <h3 class="text-xl text-white">Miscellaneous</h3>
+          </div>
+        </app-skills-card>
+      </div>
+    </div>
+  </div>
+  <div class="w-full flex flex-col items-center">
+    <div class="columns-reverse min-h-[40vh]">
+      <div class="flex flex-col gap-2 items-center">
+        <h1 class="sectionTitle whitespace-nowrap text-center">
+          Explore away!
+        </h1>
+        <p class="text-center md:max-w-md mb-4">
+          Join me on this journey where every line of code and every pixel holds
+          the potential to inspire and delight.
+        </p>
+        <div class="flex flex-row gap-4">
+          <button mat-flat-button routerLink="/projects">Projects</button>
+          <button mat-flat-button routerLink="/games">Games</button>
+          <button mat-flat-button color="primary" routerLink="/contact">
+            Contact
+          </button>
+        </div>
+      </div>
+      <img
+        matTooltip="Illustration by Storyset"
+        [matTooltipPositionAtOrigin]="true"
+        class="h-auto max-w-xs sm:max-w-sm md:max-w-md"
+        src="assets/code-bro.png"
+      />
     </div>
   </div>
 </div>
-<!-- <a href="https://storyset.com/web">Web illustrations by Storyset</a> -->

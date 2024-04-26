@@ -6,28 +6,32 @@ import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatButtonModule } from '@angular/material/button';
 import { AppBarComponent } from './components';
-import { HomePage } from './pages/home';
-import { AboutPage } from './pages/about';
+import { HomePage, SkillsCardComponent } from './pages/home';
 import { ContactPage, ContactFormComponent } from './pages/contact';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { SharedModule } from './shared';
+import { MatCardModule } from '@angular/material/card';
+import { HttpClientModule } from '@angular/common/http';
+import { MatTabsModule } from '@angular/material/tabs';
+import { CallForHireComponent } from './components/call-for-hire/call-for-hire.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppBarComponent,
     HomePage,
-    AboutPage,
     ContactPage,
     ContactFormComponent,
+    SkillsCardComponent,
+    CallForHireComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     MatButtonModule,
     MatInputModule,
@@ -35,9 +39,10 @@ import { SharedModule } from './shared';
     MatMenuModule,
     FormsModule,
     ReactiveFormsModule,
-    PdfViewerModule,
     MatTooltipModule,
     SharedModule,
+    MatCardModule,
+    MatTabsModule,
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],

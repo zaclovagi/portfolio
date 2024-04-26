@@ -1,9 +1,13 @@
 .bar {
-  @apply w-full flex flex-row justify-between items-center p-4  text-teal-500 z-20 border-b-2 border-teal-500;
+  @apply w-full flex flex-row justify-between items-center p-4  text-teal-500 z-20;
 }
 
 .stickyBar {
   @apply sticky top-0 bg-gradient-to-tr from-teal-950 to-teal-600 text-white border-none shadow-xl;
+}
+
+.stickyBar .nav-item {
+  @apply hover:bg-white/20;
 }
 .stickyTitle {
   @apply text-white;
@@ -12,11 +16,15 @@
   @apply hidden lg:flex flex-row gap-8;
 }
 .nav-item {
-  @apply flex flex-row gap-1 p-2 rounded-md hover:bg-black/10 items-center hover:scale-125;
+  @apply flex flex-row gap-1 p-2 rounded-md hover:bg-teal-500/20 items-center hover:scale-125;
 }
 .current {
-  @apply flex flex-row gap-1 p-2 rounded-md bg-teal-500/30 text-white; //text-teal-400
+  @apply flex flex-row gap-1 p-2 rounded-md bg-black/10 text-white;
 }
 .currentSticky {
   @apply text-teal-100;
+}
+
+.fullstackIcon {
+  @apply w-12 h-12 rounded-full;
 }

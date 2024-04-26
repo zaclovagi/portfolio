@@ -1,0 +1,40 @@
+<div
+  class="fixed bottom-0 right-0 m-8 z-10 max-w-[600px] flex items-center"
+  [class.bounce]="!opened"
+>
+  <button
+    *ngIf="!opened"
+    class="p-4 bg-cyan-800 rounded-full flex items-center drop-shadow-md"
+    (click)="open()"
+  >
+    <mat-icon class="text-white">announcement</mat-icon>
+  </button>
+
+  <div
+    *ngIf="opened"
+    class="flex flex-col items-center gap-4 p-4 drop-shadow-lg bg-white rounded-xl border-2"
+  >
+    <div class="w-full flex flex-row">
+      <h3 class="text-cyan-800 text-center">
+        Are you looking to strengthen your team with a skilled and adaptable
+        full-stack developer?
+      </h3>
+      <button mat-icon-button (click)="close()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+
+    <p>
+      Your search ends here! With a solid foundation in computer programming and
+      a passion for web development, I bring a wealth of expertise to the table.
+      From building robust back-end systems to crafting seamless user
+      experiences on the front end, I thrive in collaborative environments where
+      innovation is encouraged. Let's work together to drive your projects
+      forward and achieve success. Reach out today, and let's discuss how I can
+      contribute to your team!
+    </p>
+    <button mat-flat-button color="primary" routerLink="/contact">
+      Contact
+    </button>
+  </div>
+</div>
