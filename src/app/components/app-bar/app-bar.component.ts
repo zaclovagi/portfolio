@@ -40,7 +40,7 @@ export class AppBarComponent {
     {
       title: 'Games',
       url: '/games',
-      icon: 'videogame_asset',
+      icon: 'sports_esports',
     },
     {
       title: 'Contact',
