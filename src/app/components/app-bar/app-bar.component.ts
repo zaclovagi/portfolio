@@ -14,11 +14,15 @@ export class AppBarComponent {
     this.router = router;
 
     document.addEventListener('scroll', () => {
+      this.$isScrollingUp.next(this.lastY > window.scrollY);
+      this.lastY = window.scrollY;
       this.$isAtTop.next(window.scrollY < minimumY);
     });
   }
 
+  lastY = 0;
   $isAtTop: BehaviorSubject<boolean> = new BehaviorSubject(true);
+  $isScrollingUp: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
   title = 'zaclovagi.ca';
   tabs = [

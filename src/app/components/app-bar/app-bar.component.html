@@ -1,6 +1,9 @@
 <!-- header -->
 <ng-content *ngTemplateOutlet="bar"></ng-content>
-<div *ngIf="($isAtTop | async) !== true" class="fixed top-0 left-0 w-full z-20">
+<div
+  *ngIf="($isAtTop | async) !== true && ($isScrollingUp | async)"
+  class="fixed top-0 left-0 w-full z-20 animate-slidedown"
+>
   <ng-content *ngTemplateOutlet="bar"></ng-content>
 </div>
 

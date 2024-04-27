@@ -28,3 +28,16 @@
 .fullstackIcon {
   @apply w-12 h-12 rounded-full;
 }
+
+@keyframes slidedown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.animate-slidedown {
+  animation: slidedown 0.3s;
+}
