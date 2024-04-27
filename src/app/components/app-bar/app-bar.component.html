@@ -1,54 +1,61 @@
 <!-- header -->
-<div class="bar" [class.stickyBar]="($isAtTop | async) !== true">
-  <div class="whitespace-nowrap">
-    <button routerLink="/" class="flex flex-row items-center gap-2">
-      <mat-icon
-        *ngIf="($isAtTop | async) === true; else tealIcon"
-        svgIcon="fullstack-white"
-        class="fullstackIcon bg-teal-500 border-[3px] border-teal-500"
-      ></mat-icon>
-      <ng-template #tealIcon>
+<ng-content *ngTemplateOutlet="bar"></ng-content>
+<div *ngIf="($isAtTop | async) !== true" class="fixed top-0 left-0 w-full z-20">
+  <ng-content *ngTemplateOutlet="bar"></ng-content>
+</div>
+
+<ng-template #bar>
+  <div class="bar" [class.stickyBar]="($isAtTop | async) !== true">
+    <div class="whitespace-nowrap">
+      <button routerLink="/" class="flex flex-row items-center gap-2">
         <mat-icon
-          svgIcon="fullstack-white-outline"
-          class="fullstackIcon border-[3px] border-white"
+          *ngIf="($isAtTop | async) === true; else tealIcon"
+          svgIcon="fullstack-white"
+          class="fullstackIcon bg-teal-500 border-[3px] border-teal-500"
         ></mat-icon>
-      </ng-template>
-      <h1 class="title" [class.stickyTitle]="($isAtTop | async) !== true">
-        {{ title }}
-      </h1>
-    </button>
-  </div>
-  <div class="nav-group">
-    <button
-      [class.nav-item]="tab.url !== router.url"
-      [class.current]="tab.url === router.url"
-      [class.currentSticky]="
-        tab.url === router.url && ($isAtTop | async) !== true
-      "
-      *ngFor="let tab of tabs"
-      [routerLink]="tab.url"
-      [disabled]="tab.url === router.url"
-    >
-      <mat-icon>{{ tab.icon }}</mat-icon>
-      {{ tab.title }}
-    </button>
-  </div>
-  <div class="visible lg:hidden">
-    <button mat-icon-button [matMenuTriggerFor]="menu">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <mat-menu #menu="matMenu">
+        <ng-template #tealIcon>
+          <mat-icon
+            svgIcon="fullstack-white-outline"
+            class="fullstackIcon border-[3px] border-white"
+          ></mat-icon>
+        </ng-template>
+        <h1 class="title" [class.stickyTitle]="($isAtTop | async) !== true">
+          {{ title }}
+        </h1>
+      </button>
+    </div>
+    <div class="nav-group">
       <button
-        class="hover:animate-bounce"
-        mat-menu-item
+        [class.nav-item]="tab.url !== router.url"
+        [class.current]="tab.url === router.url"
+        [class.currentSticky]="
+          tab.url === router.url && ($isAtTop | async) !== true
+        "
         *ngFor="let tab of tabs"
         [routerLink]="tab.url"
+        [disabled]="tab.url === router.url"
       >
         <mat-icon>{{ tab.icon }}</mat-icon>
-        <span [class.underline]="tab.url === router.url">
-          {{ tab.title }}
-        </span>
+        {{ tab.title }}
       </button>
-    </mat-menu>
+    </div>
+    <div class="visible lg:hidden">
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button
+          class="hover:animate-bounce"
+          mat-menu-item
+          *ngFor="let tab of tabs"
+          [routerLink]="tab.url"
+        >
+          <mat-icon>{{ tab.icon }}</mat-icon>
+          <span [class.underline]="tab.url === router.url">
+            {{ tab.title }}
+          </span>
+        </button>
+      </mat-menu>
+    </div>
   </div>
-</div>
+</ng-template>
