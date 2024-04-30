@@ -1,13 +1,35 @@
-<app-page>
-  <div class="flex flex-col justify-center items-center gap-4">
-    <h1 class="sectionTitle">Projects</h1>
-    <img
-      src="assets/mobile-development.png"
-      class="h-auto max-w-xs sm:max-w-sm md:max-w-md"
-    />
-    <p class="sectionTitle">Under Construction</p>
-    <h3 class="text-center">
-      This page is under construction! Please check back soon!
-    </h3>
+<app-page class="!mb-24">
+  <h1 class="text-cyan-800 text-5xl text-center mb-4">Projects</h1>
+  <div class="flex flex-row flex-wrap justify-center gap-8">
+    <app-project-card
+      backgroundImage="assets/warrantysphere/checkout.jpeg"
+      title="WarrantySphere"
+      description='WarrantySphere is a set of multi-tenanted web applications designed to manage, track, buy/sell, and analyze warranties. The main parts of this project are the customer portal, admin dashboard, and the API that both applications use. I designed and implemented most of the low-level platform including the multi-tenant system, user authentication and security. Some other notable features are the "Property Sets" that allow warranty policies to be configured for any type of asset (home, car, boat, electronic device, etc.), as well as the "Warranty Checkout" feature, allowing customers to buy warranties and administrators to sell them. '
+      [techUsed]="['Angular', 'TailwindCSS', 'Typescript', 'NestJS', 'MySQL', 'TypeORM', 'GCP', 'AWS', 'and more.']"
+      companyName="VectorSolv"
+      liveUrl="https://api.warrantysphere.com/docs#/"
+    >
+      <!-- TODO: internalUrl="./warrantysphere" -->
+    </app-project-card>
+
+    <app-project-card
+      backgroundImage="assets/lf3/lf3-capture.png"
+      title="LF3.fit"
+      description='This project is actively used by LF3 and Altea to manage their gym communities, memberships, events, online store, and other services. Some notable features I designed and implemented were the Stripe payment gateway, the "Live Workout" Zoom integration, community calendars, and the video-on-demand feature. This project is used by thousands of individuals across Canada, customer and staff alike.'
+      [techUsed]="['Angular', 'Angular Material', 'Typescript', 'NestJS', 'MySQL', 'TypeORM', 'GCP', 'Stripe', 'and more.']"
+      companyName="VectorSolv / LF3"
+      liveUrl="https://lf3.fit"
+    >
+      <!-- TODO: internalUrl="./lf3" -->
+    </app-project-card>
+    <app-project-card
+      backgroundImage="assets/portfolio-capture.png"
+      title="Portfolio"
+      description=""
+      [techUsed]="['Angular', 'Angular Material', 'TailwindCSS', 'Typescript', 'Vercel']"
+      codeUrl="https://github.com/zaclovagi/portfolio"
+    >
+      <!-- TODO: codeUrl="https://github.com/zaclovagi/portfolio" -->
+    </app-project-card>
   </div>
 </app-page>
