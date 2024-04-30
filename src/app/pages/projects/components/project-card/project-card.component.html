@@ -1,10 +1,7 @@
 <mat-card
   class="w-full min-w-72 max-w-[600px] !h-full !shadow-none !drop-shadow-none !border !border-gray-300 !rounded-xl"
 >
-  <div [class]="'rounded-t-xl w-full h-40 bg-top bg-cover ' + bgClass"></div>
-  <!-- <div
-    class="rounded-t-xl w-full h-40 bg-top bg-cover bg-[url('assets/lf3/lf3-capture.png')]"
-  ></div> -->
+  <ng-content slot="header"></ng-content>
   <mat-card-content class="h-full">
     <div class="w-full min-h-[400px] pt-4 flex-col">
       <h1 class="sectionTitle !text-2xl">{{ title }}</h1>
