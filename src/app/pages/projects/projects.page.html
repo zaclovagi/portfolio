@@ -10,7 +10,7 @@
     >
       <div
         header
-        class="rounded-t-xl w-full h-40 bg-top bg-cover bg-[url('assets/warrantysphere/checkout.jpeg')]"
+        class="imageBackground bg-[url('assets/warrantysphere/checkout.jpeg')]"
       ></div>
       <!-- TODO: internalUrl="./warrantysphere" -->
     </app-project-card>
@@ -24,10 +24,24 @@
     >
       <div
         header
-        class="rounded-t-xl w-full h-40 bg-top bg-cover bg-[url('assets/lf3/lf3-capture.png')]"
+        class="imageBackground bg-[url('assets/lf3/lf3-capture.png')]"
       ></div>
       <!-- TODO: internalUrl="./lf3" -->
     </app-project-card>
+
+    <app-project-card
+      title="doneberley.ca"
+      companyName="Don Eberley"
+      description="This is the personal website of Don Eberley, financial advisor and my father in law. This project is to give his website a new look while maintaining the existing content. The redesign is still underway, with blogging and booking features coming soon."
+      [techUsed]="['SvelteKit', 'TailwindCSS', 'Typescript', 'Vercel']"
+      liveUrl="https://doneberley-website.vercel.app/"
+    >
+      <div
+        header
+        class="imageBackground bg-[url('assets/doneberley-capture.png')]"
+      ></div>
+    </app-project-card>
+
     <app-project-card
       title="Portfolio"
       description=""
@@ -36,9 +50,19 @@
     >
       <div
         header
-        class="rounded-t-xl w-full h-40 bg-top bg-cover bg-[url('assets/portfolio-capture.png')]"
+        class="imageBackground bg-[url('assets/portfolio-capture.png')]"
       ></div>
-      <!-- TODO: codeUrl="https://github.com/zaclovagi/portfolio" -->
+    </app-project-card>
+
+    <app-project-card
+      title="Social App"
+      description="This project is still under construction! I can't say much about it now but this is my learning grounds for everything React and React Native!"
+      [techUsed]="['React Native', 'Expo', 'TailwindCSS', 'Typescript',]"
+    >
+      <div
+        header
+        class="imageBackground !bg-contain bg-[url('assets/mobile-development.png')]"
+      ></div>
     </app-project-card>
   </div>
 </app-page>
