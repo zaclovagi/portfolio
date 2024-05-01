@@ -13,7 +13,7 @@
   @apply text-white;
 }
 .nav-group {
-  @apply hidden lg:flex flex-row gap-8;
+  @apply hidden lg:flex flex-row gap-6 xl:gap-8;
 }
 .nav-item {
   @apply flex flex-row gap-1 p-2 rounded-md hover:bg-teal-500/20 items-center hover:scale-125;
