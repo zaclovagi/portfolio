@@ -1,21 +1,31 @@
-<app-page>
-  <div class="flex flex-col justify-center items-center gap-4">
-    <h1 class="sectionTitle">Games</h1>
-    <img
-      src="assets/mobile-development.png"
-      class="h-auto max-w-xs sm:max-w-sm md:max-w-md"
-    />
-    <p class="sectionTitle">Under Construction</p>
-    <h3>
-      This page is under construction! Please check back soon as I am actively
-      working on this page!
-    </h3>
-    <p>
-      In the mean time please visit my
-      <a class="link" href="https://writingreality.itch.io" target="_blank"
-        >itch.io</a
-      >
-      profile to view and play my games.
-    </p>
+<app-page class="!mb-24">
+  <h1 class="text-cyan-800 text-5xl text-center mb-4">Games</h1>
+  <div class="flex flex-row flex-wrap justify-center gap-8">
+    <app-game-card
+      title="Hell Survivors"
+      liveText="Play on Itch.io"
+      description='This game was made as part of the Synty Studios March 2024 game jam and was crowned the winner! I had 10 days to complete a game fitting the theme of "Unlikely Allies" and could only use Synty 3D assets in the game. The game itself is a horde-survival shooter where an angel and demon have teamed up to help you stop the apocalypse. It can be played right in your browser!'
+      [techUsed]="['Unity', 'C#', 'WebGL']"
+      companyName="Personal Project - Game Jam (Winner!)"
+      liveUrl="https://writingreality.itch.io/hell-survivors"
+    >
+      <div
+        header
+        class="imageBackground bg-[url('assets/games/hellsurvivors-capture.png')]"
+      ></div>
+    </app-game-card>
+    <app-game-card
+      title="Ravenous: Blood is Power"
+      liveText="Download on Itch.io"
+      description='This game was made in 2020 as part of the Blackthornprod game jam. I had a little under 2 weeks to complete it, with all assets and code having to be made during the time of the jam. The theme was "Less is More". This was incorporated with a mechanic that makes it so you deal more damage the less health you have. It is a wave-based survival game where you play as a vampire trying to survive the endless waves of angry villagers.'
+      [techUsed]="['Unity', 'C#',  'Windows Executable']"
+      companyName="Personal Project - Game Jam"
+      liveUrl="https://writingreality.itch.io/ravenous-blood-is-power"
+    >
+      <div
+        header
+        class="imageBackground bg-[url('assets/games/ravenous-capture.png')]"
+      ></div>
+    </app-game-card>
   </div>
 </app-page>

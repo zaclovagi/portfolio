@@ -1,0 +1,34 @@
+<mat-card
+  class="w-full min-w-72 max-w-[600px] !h-full !shadow-none !drop-shadow-none !border !border-gray-300 !rounded-xl"
+>
+  <ng-content slot="header"></ng-content>
+  <mat-card-content class="h-full">
+    <div class="w-full min-h-[300px] pt-4 flex-col">
+      <h1 class="sectionTitle !text-2xl">{{ title }}</h1>
+      <mat-divider></mat-divider>
+      <div class="h-full w-full flex flex-col gap-4 text-lg">
+        <p class="text-teal-500 font-bold">{{ companyName }}</p>
+        <p>
+          <span class="font-bold">Tech Used:</span> {{ techUsed | join : ", " }}
+        </p>
+        <p class="w-full">{{ description }}</p>
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-footer>
+    <div class="w-full flex flex-row justify-end p-4 gap-4">
+      <button *ngIf="internalUrl" mat-flat-button [routerLink]="internalUrl">
+        See Details
+      </button>
+      <a
+        *ngIf="liveUrl"
+        mat-flat-button
+        color="primary"
+        [href]="liveUrl"
+        target="_blank"
+      >
+        {{ liveText }}
+      </a>
+    </div>
+  </mat-card-footer>
+</mat-card>
