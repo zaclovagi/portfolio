@@ -6,6 +6,7 @@ import { AboutPage } from './about.page';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [AboutPage],
@@ -16,6 +17,7 @@ import { MatButtonModule } from '@angular/material/button';
     PdfViewerModule,
     MatIconModule,
     MatButtonModule,
+    MatTooltipModule,
   ],
 })
 export class AboutModule {}
