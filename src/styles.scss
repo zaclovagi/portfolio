@@ -50,12 +50,6 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-html {
-  // @apply bg-codebro bg-no-repeat bg-cover;
-  // background-color: #343434;
-  // background-color: #fbf7f5;
-  // @apply bg-gradient-to-tr from-teal-950 to-teal-600;;;
-}
 
 .btn {
   @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
@@ -67,6 +61,10 @@ html {
 
 .sectionTitle {
   @apply title text-cyan-800;
+}
+
+.pageTitle {
+  @apply text-cyan-800 text-5xl text-center;
 }
 
 h1 {

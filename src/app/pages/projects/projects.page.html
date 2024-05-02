@@ -1,24 +1,26 @@
 <app-page class="!mb-24">
-  <h1 class="text-cyan-800 text-5xl text-center mb-4">Projects</h1>
+  <h1 class="pageTitle mb-4">Projects</h1>
   <div class="flex flex-row flex-wrap justify-center gap-8">
     <app-project-card
       title="WarrantySphere"
-      description='WarrantySphere is a set of multi-tenanted web applications designed to manage, track, buy/sell, and analyze warranties. The main parts of this project are the customer portal, admin dashboard, and the API that both applications use. I designed and implemented most of the low-level platform including the multi-tenant system, user authentication and security. Some other notable features are the "Property Sets" that allow warranty policies to be configured for any type of asset (home, car, boat, electronic device, etc.), as well as the "Warranty Checkout" feature, allowing customers to buy warranties and administrators to sell them. '
-      [techUsed]="['Angular', 'TailwindCSS', 'Typescript', 'NestJS', 'MySQL', 'TypeORM', 'GCP', 'AWS', 'and more.']"
+      description="WarrantySphere is a set of multi-tenanted web applications designed to manage, track, buy/sell, and analyze warranties. The main parts of this project are the customer portal, admin dashboard, and the API that both applications use. I designed and implemented most of the low-level platform including the multi-tenant system, user authentication and security, as well as many of the more complicated features that help make the app stand out from the competition."
+      [techUsed]="['Angular', 'TailwindCSS', 'Typescript', 'NestJS', 'MySQL', 'TypeORM', 'GCP', 'AWS', 'Authorize.net', 'Dwolla','and more.']"
+      [contributions]="['Multi-tenant platform systems', 'User authentication and security (Firebase integration)', 'Warranty checkout feature (Authorize.net integration)', 'Property sets (Dynamic asset properties)', 'Conditionals (Dynamic warranty coverages and prices based on user and asset information)', 'Claim Reimbursement (Dwolla banking integration)', 'Github Actions workflow for automatic deployment of web applications to Firebase and API to GCP Cloud Run with tenant and platform database migrations']"
       companyName="VectorSolv"
       liveUrl="https://api.warrantysphere.com/docs#/"
     >
+      <!-- TODO: internalUrl="./warrantysphere" -->
       <div
         header
         class="imageBackground bg-[url('assets/warrantysphere/checkout.jpeg')]"
       ></div>
-      <!-- TODO: internalUrl="./warrantysphere" -->
     </app-project-card>
 
     <app-project-card
       title="LF3.fit"
       description='This project is actively used by LF3 and Altea to manage their gym communities, memberships, events, online store, and other services. Some notable features I designed and implemented were the Stripe payment gateway, the "Live Workout" Zoom integration, community calendars, and the video-on-demand feature. This project is used by thousands of individuals across Canada, customer and staff alike.'
-      [techUsed]="['Angular', 'Angular Material', 'Typescript', 'NestJS', 'MySQL', 'TypeORM', 'GCP', 'Stripe', 'and more.']"
+      [techUsed]="['Angular', 'Angular Material', 'Typescript', 'NestJS', 'MySQL', 'TypeORM', 'GCP', 'Stripe', 'Zoom', 'Vimeo', 'and more.']"
+      [contributions]="['Stripe payment gateway (credit card and banking)', 'Live Workouts (Zoom integration)', 'Community calendars', 'Video-on-demand feature (Vimeo integration)', 'Linked family accounts']"
       companyName="VectorSolv / LF3"
       liveUrl="https://lf3.fit"
     >
@@ -34,6 +36,7 @@
       companyName="Don Eberley"
       description="This is the personal website of Don Eberley, financial advisor and my father in law. This project is to give his website a new look while maintaining the existing content. The redesign is still underway, with blogging and booking features coming soon."
       [techUsed]="['SvelteKit', 'TailwindCSS', 'Typescript', 'Vercel']"
+      [contributions]="['I designed the entire site from the ground up utilizing SvelteKit, TailwindCSS, and Skeleton UI']"
       liveUrl="https://doneberley-website.vercel.app/"
     >
       <div
@@ -44,7 +47,9 @@
 
     <app-project-card
       title="Portfolio"
-      description=""
+      description="The one-stop-shop for everything you need to know about me, Zac Lovagi! 
+      This portfolio is designed entirely by me using the Angular framework 
+      and combines Angular Material components with TailwindCSS. It also features lazy-loading for the routes!"
       [techUsed]="['Angular', 'Angular Material', 'TailwindCSS', 'Typescript', 'Vercel']"
       codeUrl="https://github.com/zaclovagi/portfolio"
     >

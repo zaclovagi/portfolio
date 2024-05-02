@@ -31,5 +31,4 @@ export class AppComponent {
       )
     );
   }
-  title = 'portfolio';
 }

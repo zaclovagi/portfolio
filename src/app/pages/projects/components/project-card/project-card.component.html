@@ -2,14 +2,18 @@
   class="w-full min-w-72 max-w-[600px] !h-full !shadow-none !drop-shadow-none !border !border-gray-300 !rounded-xl"
 >
   <ng-content slot="header"></ng-content>
-  <mat-card-content class="h-full">
+  <mat-card-content class="h-full w-full">
     <div class="w-full min-h-[400px] pt-4 flex-col">
       <h1 class="sectionTitle !text-2xl">{{ title }}</h1>
       <mat-divider></mat-divider>
-      <div class="h-full w-full flex flex-col gap-4 text-lg">
-        <p class="text-teal-500 font-bold">{{ companyName }}</p>
-        <p>
+      <div class="h-full w-full flex flex-col gap-4">
+        <p class="text-teal-500 font-bold text-lg">{{ companyName }}</p>
+        <p *ngIf="techUsed.length">
           <span class="font-bold">Tech Used:</span> {{ techUsed | join : ", " }}
+        </p>
+        <p *ngIf="contributions.length">
+          <span class="font-bold">Notable Contributions:</span>
+          {{ contributions | join : ", " }}
         </p>
         <p class="w-full">{{ description }}</p>
       </div>

@@ -1,0 +1,48 @@
+<app-page>
+  <div class="flex flex-col items-center gap-8">
+    <div>
+      <h1 class="pageTitle">WarrantySphere</h1>
+      <h2 class="text-center">VectorSolv</h2>
+    </div>
+    <div class="flex flex-col justify-center items-center">
+      <img
+        class="h-auto max-w-md rounded-xl border-2 border-gray-300 sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl"
+        [src]="'assets/warrantysphere/'+images[currentImageIndex]"
+      />
+      <div
+        class="w-full flex flex-row justify-between max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl"
+      >
+        <button
+          mat-icon-button
+          (click)="backward()"
+          class="!flex !items-center"
+          [disabled]="currentImageIndex===0"
+        >
+          <mat-icon>arrow_back</mat-icon>
+        </button>
+        <button
+          mat-icon-button
+          (click)="forward()"
+          class="!flex !items-center"
+          [disabled]="currentImageIndex===images.length-1"
+        >
+          <mat-icon>arrow_forward</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- <mat-card class="max-w-[400px]">
+    <p>
+      WarrantySphere is a set of multi-tenanted web applications designed to
+      manage, track, buy/sell, and analyze warranties. The main parts of this
+      project are the customer portal, admin dashboard, and the API that both
+      applications use. I designed and implemented most of the low-level
+      platform including the multi-tenant system, user authentication and
+      security. Some other notable features are the "Property Sets" that allow
+      warranty policies to be configured for any type of asset (home, car, boat,
+      electronic device, etc.), as well as the "Warranty Checkout" feature,
+      allowing customers to buy warranties and administrators to sell them.
+    </p>
+  </mat-card> -->
+</app-page>

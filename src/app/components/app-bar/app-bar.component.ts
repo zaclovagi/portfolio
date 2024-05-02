@@ -39,7 +39,7 @@ export class AppBarComponent {
     {
       title: 'Projects',
       url: '/projects',
-      icon: 'code',
+      icon: 'integration_instructions',
     },
     {
       title: 'Games',

@@ -8,9 +8,11 @@ import { ProjectCardComponent } from './components';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
+import { WarrantyspherePage } from './subpages';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
-  declarations: [ProjectsPage, ProjectCardComponent],
+  declarations: [ProjectsPage, ProjectCardComponent, WarrantyspherePage],
   imports: [
     CommonModule,
     ProjectsRoutingModule,
@@ -18,6 +20,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatCardModule,
     MatDividerModule,
     MatButtonModule,
+    MatIconModule,
   ],
 })
 export class ProjectsModule {}
